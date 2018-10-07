@@ -7,7 +7,7 @@ describe "GIT" do
   end
 
   it "2. What is the syntax for staging all files, including new, modified, and deleted files?" do
-    answer = "git add"
+    answer = "git add ."
     encoded_answers = ["e3ed0db138a439522bc6f0a56c71b2c90e3443db", "d43b64f144ca0689fea30adb6e5cb2150c971a0c", "1a1c76a81d0981b7fe181d7869d1ede4d1a2a24f"]
     expect(encode(answer)).to satisfy { |answer| encoded_answers.include?(answer) }
   end
@@ -30,7 +30,7 @@ describe "GIT" do
 # describe "PUSHING:" do
   it "5. From the master branch, what is the syntax for pushing the master branch
       to the remote master branch where the remote is called 'origin'?" do
-    answer = "git push"
+    answer = "git push origin master"
     encoded_answer = "6c8e01a0360da3cf6e314c69c453957b70ab1b4e"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -38,14 +38,14 @@ describe "GIT" do
   it "6. From the feature branch 'add-links', what is the syntax for creating a
       remote add-links branch with all of the local branch's content?
       (remote is still called 'origin')" do
-    answer = "?"
+    answer = "git push origin add-links"
     encoded_answer = "07476403b56e1437e855a5d7031b3abc0b97de5a"
     expect(encode(answer)).to eq(encoded_answer)
   end
 
   it "7. From the master branch, what is the syntax for pushing the master branch to the
       # remote master branch where the remote is called 'upstream'?" do
-    answer = "?"
+    answer = "git push upstream master"
     encoded_answer = "46e78005226efc7d1be2b4f9f26bcbdba2bf286d"
     expect(encode(answer)).to eq(encoded_answer)
   end
