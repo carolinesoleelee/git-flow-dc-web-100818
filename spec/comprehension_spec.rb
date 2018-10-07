@@ -115,7 +115,7 @@ describe "GIT" do
   end
 
   it "16. What is the syntax for switching to a branch called 'add-social-media-links'?" do
-    answer = "get checkout add-social-media-links"
+    answer = "git checkout add-social-media-links"
     encoded_answer = "1004b71629950e1efa0fe94f053b772b170d66b3"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -129,7 +129,7 @@ describe "GIT" do
 
   it "18. What is the one line syntax for creating and switching to a branch called
      'add-nav-bar'?" do
-    answer = "git chekcout -b add-nav-bar"
+    answer = "git checkout -b add-nav-bar"
     encoded_answer = "f6317616a8601aeb64c0f27f71a4b7bf9e3b8453"
     expect(encode(answer)).to eq(encoded_answer)
   end
